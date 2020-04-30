@@ -15,4 +15,13 @@ fun main(args: Array<String>){
     println("Pass 12 to addSeven: ${addSeven(12)}")
 
     val myLambda: () ->Unit = { println("Hi!")}
+
+    // fun
+    fun convert(x: Double, convert:(Double) -> Double): Double
+    {
+        var result = convert(x)
+        println("$x is converted to $result")
+        return result
+    }
+    convert(20.0,{c:Double -> c*1.8+32})
 }
