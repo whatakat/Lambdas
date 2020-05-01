@@ -33,3 +33,14 @@ fun convert(x: Double, converter:DoubleConversion): Double {
     println("$x is converted to $result")
     return result
 }
+fun getConversionLambda(str: String):DoubleConversion{
+    if (str == "CentigradeToFahrenheit"){
+        return {it*1.8 + 32}
+    }else if (str == "KgsToPounds"){
+        return {it*2.204623}
+    }else if (str == "PoundsToUSTons"){
+        return {it/2000.0}
+    }else{
+        return {it}
+    }
+}
