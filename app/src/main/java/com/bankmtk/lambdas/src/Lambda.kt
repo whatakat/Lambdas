@@ -1,8 +1,6 @@
 package com.bankmtk.lambdas.src
 
 fun main(args: Array<String>){
-    convert(20.0){it*1.8 + 32}
-    convertFive { it*1.8 + 32 }
 //    var addFive = {x: Int ->x + 5}
 //    println("Pass 6 to addFive: ${addFive(6)}")
 //
@@ -30,7 +28,7 @@ fun main(args: Array<String>){
 }
 typealias DoubleConversion = (Double) -> Double
 
-fun convert(x: Double, converter:DoubleConversion: Double{
+fun convert(x: Double, converter:DoubleConversion): Double {
     val result = converter(x)
     println("$x is converted to $result")
     return result
