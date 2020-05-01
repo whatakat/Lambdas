@@ -26,6 +26,7 @@ fun main(args: Array<String>){
 //    convert(20.0,{c:Double -> c*1.8+32})//a)
 //    convert(20.0){c:Double -> c*1.8+32} //b) it`s the same a)
 }
+
 typealias DoubleConversion = (Double) -> Double
 
 fun convert(x: Double, converter:DoubleConversion): Double {
@@ -43,4 +44,9 @@ fun getConversionLambda(str: String):DoubleConversion{
     }else{
         return {it}
     }
+    fun combine(lambda1: DoubleConversion,
+    lambda2: DoubleConversion): DoubleConversion{
+        return {x: Double ->lambda2(lambda1(x))}
+    }
+
 }
