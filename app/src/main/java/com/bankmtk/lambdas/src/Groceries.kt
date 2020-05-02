@@ -26,4 +26,7 @@ fun main() {
     println("vegetables: $vegetables")
     val notFrozen = groceries.filterNot { it.category == "Frozen" }
     println("notFrozen: $notFrozen")
+
+    val groceryNames = groceries.map { it.name }
+    println("groceryNames: $groceryNames")
 }
