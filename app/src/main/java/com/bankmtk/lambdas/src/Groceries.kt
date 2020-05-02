@@ -24,5 +24,6 @@ fun main() {
 //    println("totalPrice: $totalPrice")
     val vegetables = groceries.filter { it.category == "Vegetable" }
     println("vegetables: $vegetables")
-
+    val notFrozen = groceries.filterNot { it.category == "Frozen" }
+    println("notFrozen: $notFrozen")
 }
