@@ -40,4 +40,9 @@ fun main() {
     groceries.filter { it.unitPrice>3.0 }
         .forEach { println(it.name) }
 
+    var itemNames = ""
+    groceries.forEach({itemNames += "${it.name}"})
+    println("itemNames: $itemNames")
+
+
 }
