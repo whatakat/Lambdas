@@ -41,7 +41,7 @@ fun main() {
         .forEach { println(it.name) }
 
     var itemNames = ""
-    groceries.forEach({itemNames += "${it.name}"})
+    groceries.forEach({itemNames += " ${it.name}"})
     println("itemNames: $itemNames")
 
 
