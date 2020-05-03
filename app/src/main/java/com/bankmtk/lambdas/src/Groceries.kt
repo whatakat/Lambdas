@@ -53,6 +53,9 @@ fun main() {
     val sumOfInts = ints.fold(0){runningSum,item ->runningSum+item}
     println("sumOfInts: $sumOfInts")
 
+    val productOfInts = ints.fold(1){runningProduct, item -> runningProduct*item}
+    println("productOfInts: $productOfInts")
+
 
 
 }
