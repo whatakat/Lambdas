@@ -49,5 +49,10 @@ fun main() {
         it.value.forEach{ println("  ${it.name}")}
     }
 
+    val ints = listOf(1,2,3)
+    val sumOfInts = ints.fold(0){runningSum,item ->runningSum+item}
+    println("sumOfInts: $sumOfInts")
+
+
 
 }
