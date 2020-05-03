@@ -56,6 +56,9 @@ fun main() {
     val productOfInts = ints.fold(1){runningProduct, item -> runningProduct*item}
     println("productOfInts: $productOfInts")
 
+    val names = groceries.fold(""){string, item -> string+" ${item.name}"}
+    println("names: $names")
+
 
 
 }
