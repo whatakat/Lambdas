@@ -59,6 +59,9 @@ fun main() {
     val names = groceries.fold(""){string, item -> string+" ${item.name}"}
     println("names: $names")
 
+    val changeFrom50 = groceries.fold(50.0){change, item ->change-item.unitPrice*item.quantity}
+    println("changeFrom50: $changeFrom50")
+
 
 
 }
