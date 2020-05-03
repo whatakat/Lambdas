@@ -22,27 +22,32 @@ fun main() {
 //    println("sumQuantity: $sumQuantity")
 //    val totalPrice = groceries.sumByDouble { it.quantity*it.unitPrice }
 //    println("totalPrice: $totalPrice")
-    val vegetables = groceries.filter { it.category == "Vegetable" }
-    println("vegetables: $vegetables")
-    val notFrozen = groceries.filterNot { it.category == "Frozen" }
-    println("notFrozen: $notFrozen")
+//    val vegetables = groceries.filter { it.category == "Vegetable" }
+//    println("vegetables: $vegetables")
+//    val notFrozen = groceries.filterNot { it.category == "Frozen" }
+//    println("notFrozen: $notFrozen")
+//
+//    val groceryNames = groceries.map { it.name }
+//    println("groceryNames: $groceryNames")
+//    val halfUnitPrice = groceries.map { it.unitPrice*0.5 }
+//    println("halfUnitPrice: $halfUnitPrice")
+//
+//    val newPrices = groceries.filter { it.unitPrice>3.0 }
+//        .map { it.unitPrice*2 }
+//    println("newPrices: $newPrices")
+//    println("Grocery names: ")
+//    println("Groceries with unitPrice > 3.0: ")
+//    groceries.filter { it.unitPrice>3.0 }
+//        .forEach { println(it.name) }
+//
+//    var itemNames = ""
+//    groceries.forEach({itemNames += " ${it.name}"})
+//    println("itemNames: $itemNames")
 
-    val groceryNames = groceries.map { it.name }
-    println("groceryNames: $groceryNames")
-    val halfUnitPrice = groceries.map { it.unitPrice*0.5 }
-    println("halfUnitPrice: $halfUnitPrice")
-
-    val newPrices = groceries.filter { it.unitPrice>3.0 }
-        .map { it.unitPrice*2 }
-    println("newPrices: $newPrices")
-    println("Grocery names: ")
-    println("Groceries with unitPrice > 3.0: ")
-    groceries.filter { it.unitPrice>3.0 }
-        .forEach { println(it.name) }
-
-    var itemNames = ""
-    groceries.forEach({itemNames += " ${it.name}"})
-    println("itemNames: $itemNames")
+    groceries.groupBy { it.category }.forEach{
+        println(it.key)
+        it.value.forEach{ println("  ${it.name}")}
+    }
 
 
 }
